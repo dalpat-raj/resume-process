@@ -1,0 +1,41 @@
+@import "./temp1.scss";
+@import "./temp2.scss";
+@import "./temp3.scss";
+@import "./temp4.scss";
+@import "./temp5.scss";
+@import "./temp6.scss";
+@import "./temp7.scss";
+
+
+.temp__main{
+    position: relative;
+    .download__button{
+      position: fixed;
+      top: 11%;
+      right: 21%;
+      z-index: 1;
+    }
+  }
+
+@media only screen and (max-width: 768px){
+    .temp__main{
+      position: relative !important;
+      .download__button{
+        position: fixed;
+        top: 8%;
+        right: 5%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 400px){
+    .temp__main{
+      position: relative !important;
+      .download__button{
+        position: fixed;
+        top: 8%;
+        right: 5%;
+        // z-index: -1;
+      }
+    }
+  }

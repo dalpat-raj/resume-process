@@ -1,0 +1,125 @@
+@import 'animate.css';
+@import "./styles/utils/variable.scss";
+@import "./styles/utils/mixin.scss";
+@import "./styles/t-scss/main.scss";
+@import './styles/setting-scss/edit.scss';
+@import './styles/setting-scss/editor.scss';
+@import './styles/setting-scss/inputloder.scss';
+@import './styles/comp-scss/navbar.scss';
+@import './styles/comp-scss/home.scss';
+@import './styles/comp-scss/register.scss';
+@import './styles/comp-scss/login.scss';
+@import './styles/comp-scss/header.scss';
+@import './styles/comp-scss/resume.scss';
+@import './styles/comp-scss/error.scss';
+@import './styles/comp-scss/footer.scss';
+@import './styles/page-scss/about.scss';
+@import './styles/page-scss/contact.scss';
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: $font-poppins;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  color: $text-dark;
+}
+
+
+
+// global styles
+
+.container__fluid{
+    width: 95%;
+    margin: auto;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+
+.main_blue_button{
+    background-color: $bg-primary;
+    border: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: $text-white !important;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 0;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+    @include transition;
+    // &:hover{
+    //   background: $bg-secondary;
+    // }
+}
+
+.main_red_button{
+    background-color: $bg-secondary;
+    font-size: 15px;
+    font-weight: 400;
+    color: $text-white !important;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    border: none;
+    letter-spacing: 0.25px;
+    cursor: pointer ;
+    @include transition;
+
+    &:hover{
+      background: $bg-primary;
+    }
+  }
+
+.main_white_button {
+    display: inline-block;
+    background-color: $bg-white;
+    font-size: 15px;
+    font-weight: 400;
+    color: $secondary;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    border: none;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+}
+
+.main_border_button{
+  background-color: none;
+  border: 2px solid $primary;
+  font-size: 15px;
+  font-weight: 600;
+  color: $text-dark !important;
+  text-transform: capitalize;
+  padding: 10px 25px;
+  border-radius: 0;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  @include transition;
+  &:hover{
+    background: $primary;
+  }
+}

@@ -1,0 +1,93 @@
+.header__main{
+    width: 100%;
+    .header__row{
+        @include flex(space-between, center, wrap);
+        
+        .header__col{
+            // z-index: -999;
+            padding: 1rem 0;
+            flex-basis: 50%;
+            
+            h2{
+                font-size: 3rem;
+                color: $text-dark;
+                line-height: 3.5rem;
+                margin: 1rem 0;
+                em{
+                    font-style: normal;
+                    color: $primary;
+                }
+                span{
+                    color: $secondary;
+                }
+            }
+            h5{
+                margin: 1rem 0;
+            }
+            
+            img{
+                width: 80% !important;
+                float: right;
+            }
+            
+        }
+        
+    }
+}
+
+@media only screen and (max-width:768px){
+    .header__row{
+        @include flex(space-between, center, wrap);
+        
+        .header__col{
+            padding: 1rem 0 !important;
+            text-align: center;
+            flex-basis: 100% !important;
+            p{
+                padding-top: 2rem;
+            }
+            
+            h2{
+                font-size: 2rem !important;
+                line-height: 2rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            h5{
+                margin: 0.5rem 0 !important;
+            }
+            
+            img{
+                width: 80% !important;
+                float: none !important;
+            }
+           
+        }
+        
+    }
+}
+
+@media only screen and (max-width:400px){
+    .header__row{
+        
+        .header__col{
+            p{
+                padding-top: 2rem;
+            }
+            h2{
+                font-size: 2rem !important;
+                line-height: 2rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            h5{
+                margin: 0.5rem 0 !important;
+            }
+            
+            img{
+                width: 100% !important;
+            }
+            
+            
+        }
+        
+    }
+}

@@ -1,0 +1,109 @@
+// @import url("https://fonts.cdnfonts.com/css/hk-groteks?styles=21694,21686,21688,21690,21696,21698,21680,21682");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* font-family: 'Roboto', sans-serif;/ */
+/* font-family: "HK Grotesk", sans-serif; */
+.temp5__container {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  background: #ffffff;
+
+.temp4-heading {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 25px;
+}
+.temp4-info {
+  text-align: center;
+}
+.tem4-name {
+  font-size: 30px;
+  font-family: "HK Grotesk", sans-serif;
+}
+.temp4-title {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.temp4-row-1 {
+  display: flex;
+  gap: 30px;
+ 
+}
+hr {
+  background-color: #474747;
+}
+
+.temp4-contact {
+  margin-left: 30px;
+
+
+  margin-bottom: 20px;
+}
+.sign {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+.temp4-phone-num,
+.temp4-phone-email,
+.temp4-phone-web,
+.temp4-phone-add {
+  font-family: "Roboto", sans-serif;
+}
+.temp4-reference,
+.temp4-expertise,
+.temp4-contact {
+  margin-left: 30px;
+
+  margin-bottom: 10px;
+}
+.temp4-expertise li {
+  line-height: 30px;
+  margin-left: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.temp4-exppertise-all {
+  margin-left: 0px;
+}
+
+.temp4-ref-1,
+.temp4-ref-2 {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+}
+.temp4-ref-1 .ref-name,
+.temp4-ref-2 .ref-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.temp4-row-1-col-1{
+     width: 30%;
+     margin-left: 20px;
+}
+.temp4-row-1-col-2{
+    width: 60%;
+    padding: 10px 20px;
+
+}
+
+
+.temp4-job-position-1{
+  font-family: "Roboto", sans-serif;
+line-height: 30px;
+    font-weight: bold;
+}
+.temp4-company-1{
+    font-size: 0.8rem;
+line-height: 30px;
+
+  font-family: "Roboto", sans-serif;
+
+}
+.temp4-job-desc{
+    padding: 10px;
+}
+}

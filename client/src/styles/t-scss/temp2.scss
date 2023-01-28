@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400&display=swap");
+/* font-family: 'Josefin Sans', sans-serif; */
+/* font-family: 'Spectral', serif; */
+.template4__container{
+  border: 1px solid rgb(117, 112, 112);
+  background: white;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  .name{
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  li{
+    border-bottom: 0;
+  }
+  h4{
+    font-family: "Josefin Sans", sans-serif;
+  }
+  h2{
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .temp4__main{
+    flex-basis: 50%;
+    h2{
+      margin-top: 3rem;
+    }
+    h5{
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    h6{
+      margin-top: 1rem;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    p{
+      padding: 0.2rem 0;
+      font-size: 1rem;
+    }
+  }
+
+  .temp__main__2{
+    margin-top: 8.5rem;
+  }
+
+}

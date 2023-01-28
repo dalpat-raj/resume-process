@@ -1,0 +1,58 @@
+$main-color: hsl(186, 22%, 82%);
+$font-family1: sans-serif;
+
+.Template4__container {
+border: 1px solid rgb(201, 198, 198);
+font-family: $font-family1;
+width: 100%;
+background: hsl(0, 0%, 98%) !important;
+
+.name-info {
+text-align: center;
+line-height: 40px;
+}
+.inner-tech-skill,
+.inner-workexp {
+padding: 0 20px;
+margin: 10px 20px;
+}
+.inner-tech-skill ul {
+list-style: none;
+display: flex;
+gap: 0 50px;
+flex-wrap: wrap;
+}
+.heading {
+background: $main-color !important;
+padding: 3px 30px;
+line-height: 30px;
+}
+.inner-project,
+.inner-award,
+.temp1-inner-education {
+margin: 15px 30px;
+}
+
+.project-details,
+.workexp-details,
+.award-details {
+padding: 0 20px;
+}
+.project-details li,
+.education-details li,
+.workexp-details li,
+.award-details li {
+line-height: 30px;
+}
+.college-container,
+.workexp-container {
+display: flex;
+justify-content: space-between;
+}
+.education-details li {
+margin: 0 30px;
+}
+li{
+border-bottom: 0;
+}
+}

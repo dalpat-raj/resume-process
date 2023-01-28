@@ -1,0 +1,61 @@
+.input__loader{
+    .input__row{
+        @include flex(space-between, center, wrap);
+
+        h4{
+            width: 100%;
+            display: block;
+            color: $secondary;
+            text-align: center;
+            padding-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .input__col{
+            position: relative;
+            width: 48%;
+            padding: 0.5rem 0;
+
+            label{
+                font-size: 0.9rem !important;
+                color: gray !important;
+            }
+
+            input{
+                width: 100%;
+                padding: 0.5rem 0.5rem;
+                border: 0;
+                outline: none;
+                background: $bg-input;
+                
+                &:focus{
+                    border-bottom : 1px solid $primary;
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .input__loader{
+        .input__row{
+    
+            .input__col{
+                width: 48% !important;
+                padding: 0.5rem 0;
+    
+                input{
+                    width: 100% ;
+                    padding: 0.5rem 0.5rem;
+                    background: $bg-input;
+                    border: 0;
+    
+                    &:focus{
+                        outline: 2px solid $secondary;
+                    }
+                }
+            }
+        }
+    }
+}

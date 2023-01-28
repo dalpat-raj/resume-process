@@ -1,0 +1,179 @@
+nav{
+    padding: 0 0 !important;
+    background: #fff;
+    box-shadow: $box-shadow;
+    z-index: 1;
+   
+    .row{
+        @include flex(space-between, center, nowrap);
+
+        .logo{
+            z-index: 2;
+
+            img{
+                width: 150px;
+            }
+            // h2{
+            //     color: $primary;
+            //     font-size: 2rem;
+            //     span{
+            //         color: $secondary;
+            //     }
+            // }
+        }
+        .menu__list{
+           
+            ul{
+                li{
+                    display: inline-block;
+                    padding: 0 1rem;
+                    @include transition;
+                    a{
+                        color: #191a20;
+                        font-weight: 500;
+                    }
+
+                    .active{
+                        color: $secondary;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 50%;
+                            height: 2px;
+                            background: $bg-secondary;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+
+                    :hover{
+                        color: $secondary;
+                    }
+                }
+                // :nth-child(6){
+                //     button{
+                //         border: 0;
+                //         background: none;
+                //         font-weight: 500%;
+                //         font-size: 1rem;
+                //     }
+                // }
+
+
+                // :nth-child(7){
+                //     position: relative;
+
+                //     .hover__button{
+                //         position: absolute;
+                //         left: 0;
+                //         top: 100%;
+                //         width: 100%;
+                //         padding: 0 1rem;
+                //         button{
+                //             display: block;
+                //             width: 100%;
+                //             padding: 0.7rem 0;
+                //             background: $bg-light;
+                //             box-shadow: $box-shadow;
+                //             border: 0;
+                //             cursor: pointer !important;
+                //         }
+                //     }
+                // }
+            }
+        }
+
+        .menu__trigger{
+            display: none;
+            z-index: 2;
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    nav{
+        padding: 0rem 0 !important;
+        position: relative;
+        .row{
+
+            .logo{
+                h2{
+                    line-height: 1rem;
+                }
+            }
+            .menu__list{
+                @include transition;
+                
+                .show{
+                    width: 100%;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    right: 0%;
+                    background: $bg-white !important;
+                    box-shadow: $box-shadow;
+                    padding-top: 5rem;
+                    @include transition;
+                        li{
+                            display: block;
+                            text-align: center;
+                            padding: 1rem 1rem;
+                        }
+                    }
+                    .hide{
+                    @include transition;
+                    width: 100%;
+                    position: absolute;
+                    top: -100vh;
+                    right: 0%;
+                    background: $bg-white;
+                    box-shadow: $box-shadow;
+                    padding-top: 5rem;
+                    li{
+                        display: block;
+                        text-align: center;
+                        padding: 1rem 1rem;
+                    }
+                }
+            }
+            .button{
+                display: none;
+            }
+            .menu__trigger{
+                display: block;
+                font-size: 2rem;
+                padding-top: 10px;
+                cursor: pointer;
+                color: $text-dark;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    nav{
+        padding: 0 !important;
+        .row{
+            .logo{
+                h2{
+                    font-size: 1.3rem !important;
+                }
+            }
+            .menu__list{
+                .show{
+                    width: 100%;
+                    height: 100vh;
+                    text-align: center;
+                }
+                .hide{
+                    width: 100%;
+                    height: 100vh;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+}

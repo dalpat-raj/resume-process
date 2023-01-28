@@ -1,0 +1,99 @@
+.about__main{
+    margin: 2rem 0;
+
+    .about__row{
+        @include flex(space-between, center, wrap);
+
+        .about__col{
+            flex-basis: 50%;
+            width: 100%;
+            padding: 2rem;
+
+            img{
+                width: 50%;
+                float: right;
+                border-left: 10px solid $primary;
+                border-top: 5px solid $primary;
+                border-top-right-radius: 50px;
+            }
+
+            .about__text{
+                h1{
+                    font-size: 3rem;
+                    color: $text-dark;
+                }
+                h2{
+                    color: $text-dark;
+                    padding: 1rem 0;
+                    span{
+                        color: $secondary;
+                    }
+                }
+                p{
+                    padding-bottom: 1rem;
+                    color: gray;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width:768px){
+    .about__main{
+        margin: 1rem 0;
+    
+        .about__row{
+    
+            .about__col{
+                flex-basis: 50%;
+                padding: 0;
+    
+                img{
+                    width: 100%;
+                }
+    
+                .about__text{
+                    margin-top: 1rem;
+                    padding-left: 1rem;
+                    h1{
+                        font-size: 2rem;
+                    }
+                    h2{
+                        padding: 0.5rem 0;
+                       
+                    }
+                    p{
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    .about__main{
+        margin: 1rem 0;
+    
+        .about__row{
+    
+            .about__col{
+                flex-basis: 100%;
+                padding: 0;
+    
+                img{
+                    width: 100%;
+                }
+    
+                .about__text{
+                    margin-top: 1rem;
+                    padding-left: 0;
+                    
+                }
+            }
+    
+        }
+    }
+}

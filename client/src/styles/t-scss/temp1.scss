@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap");
+
+
+  $Temp2-color: hsl(41.29, 36.76%, 50.39%);
+
+
+
+.Template2-container {
+  border: 1px solid rgb(201, 198, 198);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+
+.fname {
+  color: $Temp2-color;
+}
+.temp2-info {
+  text-align: center;
+  line-height: 35px;
+}
+hr {
+  background-color: $Temp2-color;
+  padding: 0.4px 0;
+  width: 90%;
+  margin: 10px auto;
+}
+.temp2-summary,
+.temp2-skill,
+.temp2-education,
+.temp2-work-exp {
+  margin: 0 50px;
+}
+.temp2-skill {
+  display: flex;
+  text-align: left;
+  font-size: 20px;
+}
+.temp-2-pro-skill {
+  width: 50%;
+  color: $Temp2-color;
+}
+
+.temp-2-tech-skill {
+  width: 50%;
+  color: $Temp2-color;
+}
+.skill {
+  font-size: 1rem;
+  color: black;
+}
+.temp2-haeding {
+  padding: 10px 0;
+  color: $Temp2-color;
+  font-size: 20px;
+}
+.all-pro-skill,
+.all-tech-skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20%;
+}
+.all-pro-skill .skill,
+.all-tech-skill {
+  line-height: 30px;
+}
+
+.inner-education {
+  width: 100%;
+  margin: 0;
+}
+.temp2-education1 {
+  margin: 10px 0;
+}
+.temp2-education-details,
+.temp2-exp-details {
+  display: flex;
+  justify-content: space-between;
+}
+.temp2-edu-summary {
+  width: 70%;
+  margin: 10px 0;
+}
+.temp2-exp-points {
+  padding: 0 20px;
+}
+.temp2-exp-points li {
+  line-height: 30px;
+}
+}
+
+// @media only screen and (max-width:768px){
+//   .Template2-container{
+//     display: none;
+//   }
+// }
