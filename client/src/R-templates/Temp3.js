@@ -149,7 +149,7 @@ const Temp3 = () => {
                     <h4>Profile</h4>
                   </div>
                   <div className="yui-u">
-                    <p className="enlarge">{summary}</p>
+                    <p className="enlarge" dangerouslySetInnerHTML={{ __html: summary }} />
                   </div>
                 </div>
 

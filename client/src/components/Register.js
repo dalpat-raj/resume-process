@@ -61,6 +61,7 @@ const Register = () => {
 
     }
 
+
   return (
     <>
     <Navbar />
@@ -76,16 +77,16 @@ const Register = () => {
                         </div>
                         <div className="col">
                             <label>Email</label>
-                            <input type="text" onChange={handleChang} value={inputValue.email} name="email" placeholder='email' />
+                            <input type="email" onChange={handleChang} value={inputValue.email} name="email" placeholder='email'/>
                         </div>
                         <div className="col">
                             <label>Password</label>
-                            <input type={showpass ? "text" : "password"} onChange={handleChang} value={inputValue.password} name="password" placeholder='password' />
+                            <input type={showpass ? "text" : "password"} onChange={handleChang} value={inputValue.password} name="password" placeholder='password'/>
                             <small onClick={()=>setShowpass(!showpass)}>{showpass ? <AiFillEyeInvisible/> : <AiFillEye/>}</small>
                         </div>
                         <div className="col">
                             <label>Re-Enter Password</label>
-                            <input type={showcpass ? "text" : "password"} onChange={handleChang} value={inputValue.cpassword} name="cpassword" placeholder='confirm password' />
+                            <input type={showcpass ? "text" : "password"} onChange={handleChang} value={inputValue.cpassword} name="cpassword" placeholder='confirm password'/>
                             <small onClick={()=>setShowcpass(!showcpass)}>{showcpass ? <AiFillEyeInvisible/> : <AiFillEye/>}</small>
                         </div>
                         <div className="button">

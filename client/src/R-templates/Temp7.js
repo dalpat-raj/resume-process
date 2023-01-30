@@ -121,7 +121,7 @@ const Template7 = () => {
       <div className="tem7-maindiv">
         <div className="temp7-summary">
           <div className="heading-section">
-            <p>PROFESSIONAL SUMMARY</p>{" "}
+            <p dangerouslySetInnerHTML={{ __html: summary }} />{" "}
 
             </div>
           <p className="temp7-summary">{summary}</p>

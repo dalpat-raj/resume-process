@@ -15,46 +15,98 @@
             position: relative;
             width: 48%;
             padding: 0.5rem 0;
+            margin-top: -0.6rem;
 
             label{
-                font-size: 0.9rem !important;
+                font-size: 0.8rem !important;
                 color: gray !important;
             }
 
             input{
                 width: 100%;
-                padding: 0.5rem 0.5rem;
+                padding: 0.8rem 0.5rem;
                 border: 0;
                 outline: none;
                 background: $bg-input;
+                word-wrap: unset;
                 
                 &:focus{
                     border-bottom : 1px solid $primary;
                 }
             }
             
+            
+        }
+
+        
+
+        .input__new__section{
+            width: 100%;
+            margin-top: 1.4rem;
+            h3{
+                width: 100% !important;
+                display: block !important;
+                color: $text-dark;
+                font-weight: 600;
+            }
+                
+                textarea{
+                    background: $bg-input;
+                    width: 100% !important;
+                    padding: 0.8rem 0.5rem;
+                    border: 0;
+                    outline: none;
+                    resize: none;
+                    background: $bg-input;
+                    
+                    &:focus{
+                        border-bottom : 1px solid $primary;
+                    }
+                }
+
+                .input__summary{
+                    background: $bg-input;
+                    font-size: 0.9rem;
+                }
+            }
+
+        .input__date{
+
+            label{
+                display: block !important;
+            }
+            input{
+                width: 48% !important;
+                color: gray;
+            }
+            :last-child{
+                float: right;
+            }
         }
     }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:400px){
     .input__loader{
+        width: 90% !important;
+
         .input__row{
     
             .input__col{
-                width: 48% !important;
+                width: 100% !important;
                 padding: 0.5rem 0;
     
                 input{
                     width: 100% ;
-                    padding: 0.5rem 0.5rem;
-                    background: $bg-input;
-                    border: 0;
+                    padding: 0.7rem 0.5rem;
     
                     &:focus{
-                        outline: 2px solid $secondary;
+                        border-bottom: 1px solid $primary;
                     }
                 }
+            }
+            textarea{
+                height: 30vh;
             }
         }
     }

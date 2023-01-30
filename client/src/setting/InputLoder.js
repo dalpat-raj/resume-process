@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
+import { DefaultEditor } from 'react-simple-wysiwyg';
 import { StoreState } from '../context/Context';
+
 
 const InputLoder = (props) => {
   const {dispatch} = StoreState()
   const {input_fields} = props;
-  const [input_fields_name, setInput_Fields_Name] = useState('')
+  const [input_fields_name, setInput_Fields_Name] = useState('');
+  const [html, setHtml] = React.useState('');
   const obj = {};
-  
+
   useEffect(()=>{
     input_fields.forEach((i)=>{
       setInput_Fields_Name(Object.keys(i))
@@ -16,41 +19,39 @@ const InputLoder = (props) => {
   const handleChange = ({ target: { value, name } }) => {
     obj[name] = value;
     dispatch({type: 'SET_INPUT_DATA', payload: obj})
+    if(name === "summary"){
+      setHtml(value)
+    }
   }
-
-
 
   return (
     <div className="input__loader container__fluid">
       <div className="input__row">
       {
+        input_fields_name ? input_fields_name.map((input__Name, i)=>{
 
-
-
-
-
-        input_fields_name ? 
-        input_fields_name.map((inp, i)=>{
-
-          
-
-          switch (inp) {
+          switch (input__Name) {
             case "firstname":
               return (
+                <>
+                <div className="input__new__section" key={i}>
+                  <h3>Personal Details</h3>
+                </div>
                 <div className="input__col">
-                  <label>name</label>
+                  <label>First Name</label>
                   <input type="text" 
                     name={'firstname'}
                     onChange={handleChange}
                   />
                 </div> 
+                </>
               )
             case "lastname":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Last Name</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'lastname'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -58,9 +59,9 @@ const InputLoder = (props) => {
             case "position":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Wanted Job Title</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'position'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -68,9 +69,9 @@ const InputLoder = (props) => {
             case "address":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Address</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'position'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -78,9 +79,9 @@ const InputLoder = (props) => {
             case "phone":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Phone no.</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'phone'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -88,49 +89,48 @@ const InputLoder = (props) => {
             case "email":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Email</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'email'}
                     onChange={handleChange}
                   />
                 </div> 
               )
             case "qualification1":
               return (
+                <>
+                <div className="input__new__section">
+                  <h3>Education</h3>
+                </div>
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Qualification</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'qualification1'}
                     onChange={handleChange}
                   />
                 </div> 
+                </>
               )
             case "univercity1":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Univer City</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'univercity1'}
                     onChange={handleChange}
                   />
                 </div> 
               )
-            case "fromyear1":
+            case "fromyear1" || "toyear1":
               return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
+                <div className="input__col input__date">
+                  <label>Start & End Date</label>
+                  <input type="date" 
+                    name={'fromyear1'}
                     onChange={handleChange}
                   />
-                </div> 
-              )
-            case "toyear1":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
+                  <input type="date" 
+                    name={'toyear1'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -138,9 +138,9 @@ const InputLoder = (props) => {
             case "qualification2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Qualification</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'qualification2'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -148,49 +148,48 @@ const InputLoder = (props) => {
             case "univercity2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Univer City</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'univercity2'}
                     onChange={handleChange}
                   />
                 </div> 
               )
-            case "fromyear2":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
-            case "toyear2":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
+              case "fromyear2" || "toyear2":
+                return (
+                  <div className="input__col input__date">
+                    <label>Start & End Date</label>
+                    <input type="date" 
+                      name={'fromyear2'}
+                      onChange={handleChange}
+                    />
+                    <input type="date" 
+                      name={'toyear2'}
+                      onChange={handleChange}
+                    />
+                  </div> 
+                )
             case "skill1":
               return (
+                <>
+                <div className="input__new__section">
+                  <h3>Skill</h3>
+                </div>
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 1</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill1'}
                     onChange={handleChange}
                   />
                 </div> 
+                </>
               )
             case "skill2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 2</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill2'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -198,9 +197,9 @@ const InputLoder = (props) => {
             case "skill3":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 3</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill3'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -208,9 +207,9 @@ const InputLoder = (props) => {
             case "skill4":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 4</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill4'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -218,9 +217,9 @@ const InputLoder = (props) => {
             case "skill5":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 5</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill5'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -228,69 +227,70 @@ const InputLoder = (props) => {
             case "skill6":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Skill 6</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'skill6'}
                     onChange={handleChange}
                   />
                 </div> 
               )
             case "summary":
               return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
+                <>
+                <div className="input__new__section">
+                  <h3>Professional Summary</h3>
+                  <div className="input__summary">
+                   <DefaultEditor value={html} onChange={handleChange} name={'summary'}  />
+                  </div>
+                </div>
+      
+                </>
               )
             case "position1":
               return (
+                <>
+                <div className="input__new__section">
+                  <h3>Experience</h3>
+                </div>
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Position</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'position1'}
                     onChange={handleChange}
                   />
                 </div> 
+                </>
               )
             case "company1":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Company Name</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'company1'}
                     onChange={handleChange}
                   />
                 </div> 
               )
-            case "fromyear3":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
-            case "toyear3":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
+              case "fromyear3" || "toyear3":
+                return (
+                  <div className="input__col input__date">
+                    <label>Start & End Date</label>
+                    <input type="date" 
+                      name={'fromyear3'}
+                      onChange={handleChange}
+                    />
+                    <input type="date" 
+                      name={'toyear3'}
+                      onChange={handleChange}
+                    />
+                  </div> 
+                )
             case "companydescription1":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription1'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -298,9 +298,9 @@ const InputLoder = (props) => {
             case "companydescription11":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription11'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -308,9 +308,9 @@ const InputLoder = (props) => {
             case "companydescription111":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription111'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -319,9 +319,9 @@ const InputLoder = (props) => {
             case "position2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Position</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'position2'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -329,39 +329,33 @@ const InputLoder = (props) => {
             case "company2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Company</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'company2'}
                     onChange={handleChange}
                   />
                 </div> 
               )
-            case "fromyear4":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
-            case "toyear4":
-              return (
-                <div className="input__col">
-                  <label>name</label>
-                  <input type="text" 
-                    name={'firstname'}
-                    onChange={handleChange}
-                  />
-                </div> 
-              )
+              case "fromyear4" || "toyear4":
+                return (
+                  <div className="input__col input__date">
+                    <label>Start & End Date</label>
+                    <input type="date" 
+                      name={'fromyear4'}
+                      onChange={handleChange}
+                    />
+                    <input type="date" 
+                      name={'toyear4'}
+                      onChange={handleChange}
+                    />
+                  </div> 
+                )
             case "companydescription2":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription2'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -369,9 +363,9 @@ const InputLoder = (props) => {
             case "companydescription22":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription22'}
                     onChange={handleChange}
                   />
                 </div> 
@@ -379,12 +373,28 @@ const InputLoder = (props) => {
             case "companydescription222":
               return (
                 <div className="input__col">
-                  <label>name</label>
+                  <label>Description</label>
                   <input type="text" 
-                    name={'firstname'}
+                    name={'companydescription222'}
                     onChange={handleChange}
                   />
                 </div> 
+              )
+              
+            case "reference":
+              return (
+                <>
+                <div className="input__new__section">
+                  <h3>Reference</h3>
+                </div>
+                <div className="input__col">
+                  <label>Reference</label>
+                  <input type="text" 
+                    name={'reference'}
+                    onChange={handleChange}
+                  />
+                </div> 
+                </>
               )
               
               
@@ -394,18 +404,6 @@ const InputLoder = (props) => {
           }
           
 
-
-
-      //     return (
-      //       <div className="input__col" key={i}>
-      //         <label>{inp}</label>
-      //         <textarea style={{resize: 'none'}}
-      //           placeholder={inp} 
-      //           onChange={handleChange}
-      //           name={inp}
-      //         />
-      //       </div>
-      //     )
         })
       : '' 
       }

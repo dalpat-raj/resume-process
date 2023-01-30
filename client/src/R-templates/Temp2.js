@@ -137,7 +137,7 @@ const Temp2 = () => {
       <div className="temp4__main temp__main__2">
         <div className="summary">
           <h2>SUMMARY</h2>
-          <p>{summary}</p>
+          <p dangerouslySetInnerHTML={{ __html: summary }}/>
         </div>
         <div className="experience">
           <div className="experience__1">

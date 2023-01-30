@@ -88,9 +88,6 @@ const Temp1 =(props) => {
   } = input_data ? input_data : '';
 
 
-
-
-
   return (
     <div className="temp__main">
      <div className="Template2-container">
@@ -109,7 +106,7 @@ const Temp1 =(props) => {
   
         <div className="temp2-summary">
           <p className="temp2-haeding">PROFESSIONAL SUMMARY</p>
-          <p className="summary">{input_data?summary:''}</p>
+          <p className="summary" dangerouslySetInnerHTML={{ __html: summary }} />
         </div>
         <hr />
   

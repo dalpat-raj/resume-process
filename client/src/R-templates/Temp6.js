@@ -138,7 +138,7 @@ const Temp6 = () => {
             {firstname} {lastname}
           </h2>
           <h3 className="temp2-post">{position}</h3>
-          <p className="temp2-summary">{summary}</p>
+          <p className="temp2-summary" dangerouslySetInnerHTML={{ __html: summary }} />
         </div>
         <hr />
 
