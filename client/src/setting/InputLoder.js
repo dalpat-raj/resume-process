@@ -29,26 +29,24 @@ const InputLoder = (props) => {
       <div className="input__row">
       {
         input_fields_name ? input_fields_name.map((input__Name, i)=>{
-
+          
           switch (input__Name) {
             case "firstname":
               return (
-                <>
-                <div className="input__new__section" key={i}>
+               
+                <div className="input__col" key={i}>
                   <h3>Personal Details</h3>
-                </div>
-                <div className="input__col">
                   <label>First Name</label>
                   <input type="text" 
                     name={'firstname'}
                     onChange={handleChange}
                   />
                 </div> 
-                </>
+               
               )
             case "lastname":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Last Name</label>
                   <input type="text" 
                     name={'lastname'}
@@ -58,7 +56,7 @@ const InputLoder = (props) => {
               )
             case "position":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Wanted Job Title</label>
                   <input type="text" 
                     name={'position'}
@@ -68,7 +66,7 @@ const InputLoder = (props) => {
               )
             case "address":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Address</label>
                   <input type="text" 
                     name={'position'}
@@ -78,7 +76,7 @@ const InputLoder = (props) => {
               )
             case "phone":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Phone no.</label>
                   <input type="text" 
                     name={'phone'}
@@ -88,7 +86,7 @@ const InputLoder = (props) => {
               )
             case "email":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Email</label>
                   <input type="text" 
                     name={'email'}
@@ -98,22 +96,18 @@ const InputLoder = (props) => {
               )
             case "qualification1":
               return (
-                <>
-                <div className="input__new__section">
+                <div className="input__col" key={i}>
                   <h3>Education</h3>
-                </div>
-                <div className="input__col">
                   <label>Qualification</label>
                   <input type="text" 
                     name={'qualification1'}
                     onChange={handleChange}
                   />
                 </div> 
-                </>
               )
             case "univercity1":
               return (
-                <div className="input__col">
+                <div className="input__col"key={i}>
                   <label>Univer City</label>
                   <input type="text" 
                     name={'univercity1'}
@@ -123,7 +117,7 @@ const InputLoder = (props) => {
               )
             case "fromyear1" || "toyear1":
               return (
-                <div className="input__col input__date">
+                <div className="input__col input__date" key={i}>
                   <label>Start & End Date</label>
                   <input type="date" 
                     name={'fromyear1'}
@@ -137,7 +131,7 @@ const InputLoder = (props) => {
               )
             case "qualification2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Qualification</label>
                   <input type="text" 
                     name={'qualification2'}
@@ -147,7 +141,7 @@ const InputLoder = (props) => {
               )
             case "univercity2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Univer City</label>
                   <input type="text" 
                     name={'univercity2'}
@@ -157,7 +151,7 @@ const InputLoder = (props) => {
               )
               case "fromyear2" || "toyear2":
                 return (
-                  <div className="input__col input__date">
+                  <div className="input__col input__date" key={i}>
                     <label>Start & End Date</label>
                     <input type="date" 
                       name={'fromyear2'}
@@ -171,22 +165,18 @@ const InputLoder = (props) => {
                 )
             case "skill1":
               return (
-                <>
-                <div className="input__new__section">
+                <div className="input__col" key={i}>
                   <h3>Skill</h3>
-                </div>
-                <div className="input__col">
                   <label>Skill 1</label>
                   <input type="text" 
                     name={'skill1'}
                     onChange={handleChange}
                   />
                 </div> 
-                </>
               )
             case "skill2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Skill 2</label>
                   <input type="text" 
                     name={'skill2'}
@@ -196,7 +186,7 @@ const InputLoder = (props) => {
               )
             case "skill3":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Skill 3</label>
                   <input type="text" 
                     name={'skill3'}
@@ -206,7 +196,7 @@ const InputLoder = (props) => {
               )
             case "skill4":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Skill 4</label>
                   <input type="text" 
                     name={'skill4'}
@@ -216,7 +206,7 @@ const InputLoder = (props) => {
               )
             case "skill5":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Skill 5</label>
                   <input type="text" 
                     name={'skill5'}
@@ -226,7 +216,7 @@ const InputLoder = (props) => {
               )
             case "skill6":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Skill 6</label>
                   <input type="text" 
                     name={'skill6'}
@@ -236,34 +226,30 @@ const InputLoder = (props) => {
               )
             case "summary":
               return (
-                <>
-                <div className="input__new__section">
+                
+                <div className="input__new__section" key={i}>
                   <h3>Professional Summary</h3>
                   <div className="input__summary">
                    <DefaultEditor value={html} onChange={handleChange} name={'summary'}  />
                   </div>
                 </div>
       
-                </>
+                
               )
             case "position1":
               return (
-                <>
-                <div className="input__new__section">
+                <div className="input__col" key={i}>
                   <h3>Experience</h3>
-                </div>
-                <div className="input__col">
                   <label>Position</label>
                   <input type="text" 
                     name={'position1'}
                     onChange={handleChange}
                   />
-                </div> 
-                </>
+                </div>
               )
             case "company1":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Company Name</label>
                   <input type="text" 
                     name={'company1'}
@@ -273,7 +259,7 @@ const InputLoder = (props) => {
               )
               case "fromyear3" || "toyear3":
                 return (
-                  <div className="input__col input__date">
+                  <div className="input__col input__date" key={i}>
                     <label>Start & End Date</label>
                     <input type="date" 
                       name={'fromyear3'}
@@ -287,7 +273,7 @@ const InputLoder = (props) => {
                 )
             case "companydescription1":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription1'}
@@ -297,7 +283,7 @@ const InputLoder = (props) => {
               )
             case "companydescription11":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription11'}
@@ -307,7 +293,7 @@ const InputLoder = (props) => {
               )
             case "companydescription111":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription111'}
@@ -318,7 +304,7 @@ const InputLoder = (props) => {
               
             case "position2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Position</label>
                   <input type="text" 
                     name={'position2'}
@@ -328,7 +314,7 @@ const InputLoder = (props) => {
               )
             case "company2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Company</label>
                   <input type="text" 
                     name={'company2'}
@@ -338,7 +324,7 @@ const InputLoder = (props) => {
               )
               case "fromyear4" || "toyear4":
                 return (
-                  <div className="input__col input__date">
+                  <div className="input__col input__date" key={i}>
                     <label>Start & End Date</label>
                     <input type="date" 
                       name={'fromyear4'}
@@ -352,7 +338,7 @@ const InputLoder = (props) => {
                 )
             case "companydescription2":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription2'}
@@ -362,7 +348,7 @@ const InputLoder = (props) => {
               )
             case "companydescription22":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription22'}
@@ -372,7 +358,7 @@ const InputLoder = (props) => {
               )
             case "companydescription222":
               return (
-                <div className="input__col">
+                <div className="input__col" key={i}>
                   <label>Description</label>
                   <input type="text" 
                     name={'companydescription222'}
@@ -383,18 +369,14 @@ const InputLoder = (props) => {
               
             case "reference":
               return (
-                <>
-                <div className="input__new__section">
+                <div className="input__col" key={i}>
                   <h3>Reference</h3>
-                </div>
-                <div className="input__col">
                   <label>Reference</label>
                   <input type="text" 
                     name={'reference'}
                     onChange={handleChange}
                   />
                 </div> 
-                </>
               )
               
               
@@ -408,7 +390,7 @@ const InputLoder = (props) => {
       : '' 
       }
       </div>
-    </div>
+     </div>
   )
 
 

@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { StoreState } from "../context/Context";
@@ -14,37 +14,37 @@ const Home = () => {
  
   useEffect(() => {
 
-    // const homePageValid = async () => {
-    //   let token = localStorage.getItem("userdatatoken");
+    const homePageValid = async () => {
+      let token = localStorage.getItem("userdatatoken");
   
-    //   axios.get("api/vailduser", {
-    //       headers: {
-    //         token: token,
-    //       },
-    //     })
-    //     .then((res) => {
-    //       if (res.status === 200) {
-    //         dispatch({type: "SET_USER_DETAILS",payload: res.data.ValidUserOne });
-    //       } else {
-    //         navigate("/login");
-    //       }
-    //     }).catch((err)=>{
-    //       console.log('vu err');
-    //     })
-    // };
-    // homePageValid(); 
+      axios.get("api/vailduser", {
+          headers: {
+            token: token,
+          },
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            dispatch({type: "SET_USER_DETAILS",payload: res.data.ValidUserOne });
+          } else {
+            navigate("/login");
+          }
+        }).catch((err)=>{
+          console.log('vu err');
+        })
+    };
+    homePageValid(); 
   }, [navigate, dispatch]); 
 
   return (
     <>
-    <Navbar/>
-      <div className="Home">
-        <Header />
-        <Resume />
-      </div>
-      <Footer />
+        <Navbar/>
+        <div className="home">
+          <Header />
+          <Resume />
+        </div>
+        <Footer/>
     </>
-  );
+  )
 };
 
-export default Home;
+export default Home

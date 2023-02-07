@@ -14,10 +14,9 @@ const Contact = () => {
 
     emailjs.sendForm('service_5967k0s', 'template_9z7c2la', form.current, 'zW2qo1R1M7dda8MmW')
       .then((result) => {
-          console.log(result.text);
           setClientMsg('Massege Successfully Send')
       }, (error) => {
-          console.log(error.text);
+        throw error;
       });
   };
 

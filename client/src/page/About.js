@@ -1,5 +1,5 @@
 import React from 'react'
-import dalpat from "../assets/dalpat.jpg";
+import dalpat from "../assets/dalpat.png";
 import Footer from "../components/Footer"
 import Navbar from '../components/Navbar';
 

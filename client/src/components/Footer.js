@@ -1,11 +1,9 @@
 import React from 'react'
 import {RxInstagramLogo} from "react-icons/rx"
-import {FaLinkedinIn} from "react-icons/fa"
-import {FaPinterestP} from "react-icons/fa"
-import {FaWhatsapp} from "react-icons/fa"
-import {FaFacebookF} from "react-icons/fa"
+import {FaLinkedinIn,FaPinterestP,FaWhatsapp,FaFacebookF} from "react-icons/fa"
 
 const Footer = () => {
+    
   return (
     <div className='footer'>
             <div className="icon section_heading">
@@ -13,8 +11,8 @@ const Footer = () => {
                 <ul>
                     <li className='insta'><RxInstagramLogo /></li>
                     <li className='linked'><FaLinkedinIn/></li>
-                    <li pint><FaPinterestP/></li>
-                    <li whats><FaWhatsapp/></li>
+                    <li className="pint"><FaPinterestP/></li>
+                    <li className="whats"><FaWhatsapp/></li>
                     <li className='faceb'><FaFacebookF/></li>
                 </ul>
             </div>
@@ -59,6 +57,10 @@ const Footer = () => {
                     <li>Right of Withdrawal</li>
                 </ul>
             </div>
+        </div>
+        <div className="copyright">
+            <h4>Copyright 2023 - ResumeBuildIn.com</h4>
+            <p>Created by Dalpat Raj</p>
         </div>
     </div>
   )

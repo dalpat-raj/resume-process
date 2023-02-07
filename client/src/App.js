@@ -9,7 +9,7 @@ import Register from './components/Register';
 import Home from './components/Home';
 import Contact from "./page/Contact"
 import About from "./page/About"
-// import Protect from './components/Protect';
+import Protect from './components/Protect';
 
 function App() {
   return (
@@ -18,12 +18,11 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/resume' element={<Resume/>} />
         <Route path='/edit' element={<Edit/>} />
-        <Route path='/editor' element={<Editor/>} />
+        <Route path='/editor' element={<Protect Component={ Editor }/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-        <Route path='/contact' element={<Contact/>} />
+        <Route path='/contact' element={<Protect Component={Contact} />} />
         <Route path='/about' element={<About/>} />
-
         <Route path='/*' element={<Error/>} />
       </Routes>
     </BrowserRouter>

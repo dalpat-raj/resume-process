@@ -51,7 +51,6 @@ const Resume = () => {
     }
 
     return (
-      <>
         <div className="resume container__fluid">
           <div className="resume__heading">
             <h2>Choose <span>Resume</span> Template</h2>
@@ -70,7 +69,6 @@ const Resume = () => {
 
           </div>
         </div>
-      </>
     )
 }
 

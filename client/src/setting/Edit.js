@@ -4,6 +4,7 @@ import { StoreState } from '../context/Context';
 import TempLoder from './TempLoder';
 import edit from '../assets/edit.png'
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 const Edit = () => {
@@ -24,7 +25,7 @@ const Edit = () => {
           <div className="edit__row">
 
             <div className='temp__loading edit__col__width'>
-              <img src={edit} alt="resumebuildin" />
+              <img src={`/images/T${skin_code}.jpg`} alt="resumebuildin" />
               <div className="temp__show">
                 <TempLoder skin_code={skin_code}  />
               </div>
@@ -37,7 +38,7 @@ const Edit = () => {
             </div>
 
             <div className="box edit__col__width">
-              <h5>raj</h5>
+              <h5>Effortlessly make a job-worthy resume and cover letter that gets you hired faster</h5>
             </div>
 
             <div className="edit__resume__text edit__col__width">
@@ -54,6 +55,7 @@ const Edit = () => {
         </div>
         
     </div>
+    <Footer/>
     </>
     
   )

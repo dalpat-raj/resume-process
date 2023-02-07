@@ -23,7 +23,7 @@
                 .col{
                     position: relative;
                     width: 100%;
-                    margin: 1rem 0;
+                    padding: 0.9rem 0;
                     label{
                         display: block;
                         color: $text-dark;
@@ -47,8 +47,17 @@
                         font-size: 1.2em;
                         cursor: pointer;
                     }
+                    span{
+                        color: $secondary;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10%;
+                    }
                 }
                 .button{
+                    margin: 1rem 0;
                     .login__button{
                         display: block;
                         width: 100%;
@@ -56,6 +65,15 @@
                     .register__button{
                         background: none;
                         border: 0;
+                        color: blue;
+                        text-decoration: underline;
+                        padding-top: 1rem;
+                        cursor: pointer;
+                    }
+                    .forgate__button{
+                        background: none;
+                        border: 0;
+                        float: right;
                         color: blue;
                         text-decoration: underline;
                         padding-top: 1rem;
